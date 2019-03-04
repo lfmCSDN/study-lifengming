@@ -15,13 +15,13 @@ public class InstanceBeanPostProcessor implements InstantiationAwareBeanPostProc
 
     @Override
     public Object postProcessBeforeInstantiation(Class<?> aClass, String s) throws BeansException {
-        System.out.println("2.实例化bean之前调用,即调用bean类构造函数之前调用（InstantiationAwareBeanPostProcessor:postProcessBeforeInstantiation） " + aClass.getName());
+        System.out.println("2.实例化bean之前处理,即调用bean类构造函数之前调用（InstantiationAwareBeanPostProcessor:postProcessBeforeInstantiation） " + aClass.getName());
         return null;
     }
 
     @Override
     public boolean postProcessAfterInstantiation(Object o, String s) throws BeansException {
-        System.out.println( "4.bean实例化后调用,返回boolean,并且返回false则不会注入属性(InstantiationAwareBeanPostProcessor:postProcessAfterInstantiation)" );
+        System.out.println( "4.bean实例化后处理,返回boolean,并且返回false则不会注入属性(InstantiationAwareBeanPostProcessor:postProcessAfterInstantiation)" );
         return true;
     }
 
